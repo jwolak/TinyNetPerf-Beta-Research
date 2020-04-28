@@ -1,0 +1,64 @@
+
+#eclipse
+.cproject
+.project
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.x86
+*.x64
+*.arm
+
+#Eclipse setting
+.settings
+
+#Visual Studio Code setting
+.metadata/
+.vscode
+.settings
+
+#gdb debugger
+.gdb_history
+.gdb_*
+
+#direcory
+TinyNetPerf/Build/CMakeCache.txt
+TinyNetPerf/Build/CMakeFiles/
+TinyNetPerf/Build/Makefile
+TinyNetPerf/Build/cmake_install.cmake
+
+UnitTests/Build/CMakeCache.txt
+UnitTests/Build/CMakeFiles/
+UnitTests/Build/Makefile
+UnitTests/Build/cmake_install.cmake
+

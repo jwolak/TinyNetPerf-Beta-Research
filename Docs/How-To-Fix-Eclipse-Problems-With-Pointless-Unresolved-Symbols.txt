@@ -1,0 +1,7 @@
+
+1. Switch to a new workspace.
+2. Remove .cproject file and the ".settings" folder
+3. Import your project as Makefile project (or just create a new if you prefer CDT Build system)
+4. Go to project-> properties->C/C++ Build->Toolchain editor. Choose your toolchain.
+5. Press project->Index->Rebuild
+6. If the problem isn't resolved, change system language to English and try the above steps again.

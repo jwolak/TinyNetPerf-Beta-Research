@@ -1,0 +1,28 @@
+#Check the version of gcc and g++ (g++-9 && gcc-9 s example)
+1. $> gcc -v
+2. $> g++ -v
+
+#Check the symbolic link
+3. $> -la /usr/bin | grep gcc-
+4. $> -la /usr/bin | grep g++-
+
+#Add repository with newer version of g++/gcc
+5. $> sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+6. $> sudo apt update
+
+#Install wanted g++/gcc
+7. $> sudo apt install gcc-9
+8. $> sudo apt install g++-9
+
+#Remove "old" symbolic links
+9. $> rm /usr/bin/gcc
+10. $> rm /usr/bin/g++
+
+#Create new links to new gcc/g++
+11. $> ln -s /usr/bin/gcc-9 /usr/bin/gcc
+12. $> ln -s /usr/bin/g++-9 /usr/bin/g++
+
+
+#Check the version of gcc and g++
+13. $> gcc -v
+14. $> g++ -v

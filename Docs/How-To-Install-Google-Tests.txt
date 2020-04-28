@@ -1,0 +1,69 @@
+***Build from repo
+
+#Install gtest
+1. $> sudo apt-get install libgtest-dev 
+
+#Install gmock
+2. $> sudo apt-get install google-mock 
+
+#Install Cmake:
+3. $> sudo apt-get install cmake
+
+#Build project gtest
+4. $> cd /usr/src/gtest
+5. $> sudo cmake CMakeLists.txt
+6. $> sudo make
+
+#Copy all *.a files to /usr/lib
+7. $> cp *.a /usr/lib
+
+#Build project gmock
+8. $> cd /usr/src/gmock
+9. $> sudo cmake CMakeLists.txt
+10. $> sudo make
+
+#Copy all *.a files to /usr/lib
+11. $> cp *.a /usr/lib
+
+#**************************************************************************************************
+
+***Build from sources:
+
+#Clone master resource from google github
+1. $> git clone https://github.com/google/googletest.git
+
+#Install Cmake:
+2. $>sudo apt-get install cmake
+
+Build master Gmock:
+3. $> cd googletest/googlemock
+4. $> sudo cmake CMakeLists.txt
+5. $> sudo make
+
+#Copy all *.a files to /usr/lib:
+6. cd googletest/googlemock/lib
+7. $> sudo cp *.a /usr/lib
+
+#Build master Gtest:
+8. $> cd googletest/googletest
+9. $> sudo cmake CMakeLists.txt
+10. $> sudo make
+
+#Copy all *.a files to /usr/lib:
+11. $> cd googletest/googletest/lib
+12. $> sudo cp *.a /usr/lib
+
+#IMPORTANT!
+#Copy necessary includes of gmock and gtest to /usr/include
+13. $> sudo cp -r include/gmock /usr/include/
+14. $> sudo cp -r ../googletest/include/gtest/ /usr/include/
+
+#**************************************************************************************************
+
+ECLIPSE:
+
+Create a new C++ project and add "gmock" and "pthread" options to Linker library Right click on Project --> Properties --> C/C++ Builder --> Setting --> Tool Settings --> GCC C++ Linker --> Libraries Add... gmock pthread
+
+NOTE: that gmock must be frond of pthread in order
+
+
